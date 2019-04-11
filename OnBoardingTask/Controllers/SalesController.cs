@@ -83,7 +83,8 @@ namespace OnBoardingTask.Controllers
             {
                 return NotFound();
             }
-            ViewData["CustomerId"] = new SelectList(_context.Customer, "Id", "Id", sales.CustomerId);
+            //ViewData["CustomerId"] = new SelectList(_context.Customer, "Id", "Id", sales.CustomerId);
+            ViewData["CustomerId"] = new SelectList(_context.Customer, "Id", "Name", sales.CustomerId);
             return View(sales);
         }
 
